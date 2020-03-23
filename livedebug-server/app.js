@@ -1,7 +1,7 @@
 const express = require('express');
-// const cors = require('cors')
 const app = express();
 
+// const cors = require('cors')
 const port = 3000
 
 const routes = require('./routes/');
@@ -11,9 +11,9 @@ const errorHandler = require('./middlewares/error-handler');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(errorHandler);
 app.use('/', routes);
+app.use(errorHandler);
 
-app.listen(port, ()=>console.log('listening on', port))
+// app.listen(port, ()=>console.log('listening on', port))
 
-// module.exports = app;
+module.exports = app;

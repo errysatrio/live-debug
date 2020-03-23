@@ -5,8 +5,8 @@ const booksRoutes = require('./books');
 const membersRoutes = require('./members');
 const loansRoutes = require('./loans');
 
-router.use('/', booksRoutes);
+router.use('/books', booksRoutes);
 router.use('/members', membersRoutes);
-router.use('/loans', loansRoutes);
+router.use('/', loansRoutes);
 
 module.exports = router;
