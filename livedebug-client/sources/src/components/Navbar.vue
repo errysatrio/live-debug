@@ -12,10 +12,10 @@
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item" v-if="getRoute === '/'">
-            <a class="nav-link" href="#tips" v-smooth-scroll>Tips</a>
+            <router-link class="nav-link" to="/tips">tips</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" href="/tracking">Tracking</router-link>
+            <router-link class="nav-link" to="/tracking">Tracking</router-link>
           </li>
         </ul>
       </div>
