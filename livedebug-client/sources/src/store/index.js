@@ -26,7 +26,7 @@ export default new Vuex.Store({
       state.globals = payload
     },
     FETCH_COUNTRIES (state, payload) {
-      state.countries = state
+      state.countries = payload
     }
   },
   actions: {
@@ -44,7 +44,7 @@ export default new Vuex.Store({
         })
     },
     fetchCountries ({ commit }) {
-      this.state.countriesLoading = true
+      this.$state.countriesLoading = true
       covid.get('/countries')
         .then(({ data }) => {
           commit('FETCH_COUNTRIES', data)
